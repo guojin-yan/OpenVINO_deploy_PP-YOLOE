@@ -43,18 +43,18 @@ git clone https://github.com/jiangjiajun/PaddleUtils.git
 // 打开指定文件
 cd E:\Paddle\PaddleUtils\paddle
 // 模型裁剪
-python prune_paddle_model.py --model_dir ppyoloe_plus_crn_l_80e_coco --model_filename model.pdmodel --params_filename model.pdiparams --output_names concat_16.tmp_0 concat_14.tmp_0 --save_dir export_model
+python prune_paddle_model.py --model_dir ppyoloe_plus_crn_l_80e_coco --model_filename model.pdmodel --params_filename model.pdiparams --output_names tmp_16 concat_14.tmp_0 --save_dir export_model
 ```
 
 &emsp;指令说明：
 
-|      标志位       |       说明       |              输入               |
-| :---------------: | :--------------: | :-----------------------------: |
-|    --model_dir    |   模型文件路径   |   ppyoloe_plus_crn_l_80e_coco   |
-| --model_filename  |  静态图模型文件  |          model.pdmodel          |
-| --params_filename | 模型配置文件信息 |         model.pdiparams         |
-|  --output_names   |    输出节点名    | concat_16.tmp_0 concat_14.tmp_0 |
-|    --save_dir     |   模型保存路径   |          export_model           |
+|      标志位       |       说明       |            输入             |
+| :---------------: | :--------------: | :-------------------------: |
+|    --model_dir    |   模型文件路径   | ppyoloe_plus_crn_l_80e_coco |
+| --model_filename  |  静态图模型文件  |        model.pdmodel        |
+| --params_filename | 模型配置文件信息 |       model.pdiparams       |
+|  --output_names   |    输出节点名    |   tmp_16 concat_14.tmp_0    |
+|    --save_dir     |   模型保存路径   |        export_model         |
 
 &emsp;此处主要关注输出节点名这一项输入，由于原模型输入包含后处理这一部分，在模型部署时会出错，所以模型裁剪的主要目的就是将模型后处理这一步去掉，因此将模型输出设置为后处理开始前的模型节点，此处主要存在两个节点：
 
@@ -64,7 +64,7 @@ python prune_paddle_model.py --model_dir ppyoloe_plus_crn_l_80e_coco --model_fil
 
 &emsp;第二个节点是模型预测狂输出节点，其位置如下图所示：
 
-![image-20221004002629750](.\image\image-20221004002629750.png)
+![image-20221004030109206](E:\Git_space\基于OpenVINO部署PP-YOLOE模型\doc\image\image-20221004030109206.png)
 
 
 
@@ -78,7 +78,7 @@ python prune_paddle_model.py --model_dir ppyoloe_plus_crn_l_80e_coco --model_fil
 
 &emsp;使用模型查看器，可以看出导出的模型，输入输出发生了改变。模型的输入仅包含**image**一项，原有的**scale_factor**输入由于在模型中使用不到，被一并削减掉。模型的输出变成我们指定的节点输出。
 
-![image-20221004003045094](.\image\image-20221004003045094.png)
+![image-20221004030016832](E:\Git_space\基于OpenVINO部署PP-YOLOE模型\doc\image\image-20221004030016832.png)
 
 
 
@@ -99,3 +99,7 @@ paddle2onnx --model_dir export_model --model_filename model.pdmodel --params_fil
 &emsp;此处需要指定模型的输入形状，--input_shape_dict "{'image':[1,3,640,640]}"，其他设置按照常规设置即可，模型输出如下图所示：
 
 ![image-20221004004801198](.\image\image-20221004004801198.png)
+
+
+
+![image-20221004025931422](E:\Git_space\基于OpenVINO部署PP-YOLOE模型\doc\image\image-20221004025931422.png)
