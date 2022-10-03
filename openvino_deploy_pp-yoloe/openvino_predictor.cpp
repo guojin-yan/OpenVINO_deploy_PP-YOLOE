@@ -1,9 +1,6 @@
 #include "openvino_predictor.h"
 
 // 构造函数
-Predictor::Predictor() {
-    p = new CoreStruct(); // 创建推理引擎指针
-}
 Predictor::Predictor(std::string& model_path, std::string& device_name) {
     p = new CoreStruct(); // 创建推理引擎指针
     p->model_ptr = p->core.read_model(model_path); // 读取推理模型
