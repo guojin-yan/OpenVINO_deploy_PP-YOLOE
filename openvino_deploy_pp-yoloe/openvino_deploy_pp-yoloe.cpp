@@ -21,6 +21,7 @@ int main()
 void openvino_deploy_ppyoloe() {
     // 模型路径
     std::string model_path = "../model/ppyoloe_plus_crn_s_80e_coco.onnx";
+    // std::string model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_l_80e_coco.onnx";
     // 设备名称
     std::string device_name = "CPU";
     // 输入节点
@@ -42,18 +43,18 @@ void openvino_deploy_ppyoloe() {
     image_pro.read_class_names(lable_path);
 
     cv::Mat image = cv::imread(image_path);
-    std::cout << "Hello World!\n";
+
     cv::Size input_size(640, 640);
     int length = image.rows > image.cols ? image.rows : image.cols;
-    cv::Mat input_mat = cv::Mat::zeros(length, length,CV_8SC3);
+    cv::Mat input_mat = cv::Mat::zeros(length, length,CV_8UC3);
     cv::Rect roi(0, 0, image.cols, image.rows);
-    std::cout << "Hello World!\n";
+
     image.copyTo(input_mat(roi));
-    std::cout << "Hello World!\n";
+
     image_pro.scale_factor = (double)length / 640.0 ;
-    std::cout << "Hello World!\n"<< image_pro.scale_factor<<"\n";
-    cv::Mat input_data = image_pro.image_normalize(image, input_size, 0);
-    std::cout << "Hello World!\n";
+
+    cv::Mat input_data = image_pro.image_normalize(input_mat, input_size, 2);
+
     ov::Tensor input_tensor = predictor.get_tensor(input__node_name);
 
     predictor.fill_tensor_data_image(input_tensor, input_data);

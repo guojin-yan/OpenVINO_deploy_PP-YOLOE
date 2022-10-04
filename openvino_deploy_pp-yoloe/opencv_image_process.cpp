@@ -44,7 +44,21 @@ cv::Mat ImageProcess::image_normalize(cv::Mat& sourse_mat, cv::Size& size, int t
 
         for (auto i = 0; i < rgb_channels.size(); i++) {
             //分通道依此对每一个通道数据进行归一化处理
-            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / mean_values[i], (0.0 - mean_values[i]) / std_values[i]);
+            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i], (0.0 - mean_values[i]) / std_values[i]);
+        }
+
+        cv::merge(rgb_channels, image); // 合并图片数据通道
+        return image;
+    }
+    else if (type == 2) {
+        std::vector<float> std_values{ 1.0 * 255, 1.0 * 255, 1.0 * 255 };
+        std::vector<cv::Mat> rgb_channels(3);
+
+        cv::split(image, rgb_channels); // 分离图片数据通道
+
+        for (auto i = 0; i < rgb_channels.size(); i++) {
+            //分通道依此对每一个通道数据进行归一化处理
+            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i]);
         }
 
         cv::merge(rgb_channels, image); // 合并图片数据通道
@@ -60,11 +74,12 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
     conf_mat = conf_mat.t();
     std::cout << conf_mat.cols << "   " << conf_mat.rows << std::endl;
 
-    std::vector<cv::Rect> position_boxes;
-    std::vector<float> confidences;
-    std::vector<int> classIds;
+    std::vector<cv::Rect> position_boxes; // 矩形框容器
+    std::vector<float> confidences; // 置信值容器
+    std::vector<int> classIds; // 类别容器
 
     for (int i = 0; i < 8400; i++) {
+        // 获取最大预测结果
         cv::Mat row = conf_mat.row(i);
         cv::Point max_point;
         double score;
@@ -73,6 +88,7 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
         // 置信度 0～1之间
         if (score > 0.5)
         {
+            // 构建预测矩形框
             float x1 = vector_box[4*(i-1)];
             float y1 = vector_box[4 * (i - 1) + 1];
             float x2 = vector_box[4 * (i - 1) + 2];
@@ -94,16 +110,19 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
 
 
     }
+    // 非极大值抑制
     std::vector<int> indexes;
-    cv::dnn::NMSBoxes(position_boxes, confidences, 0.5, 0.45, indexes);
+    cv::dnn::NMSBoxes(position_boxes, confidences, 0.25, 0.35, indexes);
+    // 将预测结果绘制到原图片上
     for (size_t i = 0; i < indexes.size(); i++) {
         int index = indexes[i];
         int idx = classIds[index];
-        cv::rectangle(image, position_boxes[index], cv::Scalar(0, 0, 255), 2, 8);
-        cv::rectangle(image, cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 20),
+        cv::rectangle(image, position_boxes[index], cv::Scalar(0, 0, 255), 1, 8);
+        cv::rectangle(image, cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 10),
             cv::Point(position_boxes[index].br().x, position_boxes[index].tl().y), cv::Scalar(0, 255, 255), -1);
-        cv::putText(image, class_names[idx], cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 10), cv::FONT_HERSHEY_SIMPLEX, .5, cv::Scalar(0, 0, 0));
-        std::cout << class_names[idx] << std::endl;
+        cv::putText(image, class_names[idx] + " " + std::to_string(confidences[idx]), 
+            cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 5),
+            cv::FONT_HERSHEY_SIMPLEX, 0.3, cv::Scalar(0, 0, 0));
     }
 
 
