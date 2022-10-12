@@ -8,6 +8,9 @@ import numpy as np
 from openvino.runtime import Core
 
 class Predictor:
+    """
+    OpenVINO 模型推理器
+    """
     def __init__(self, model_path):
         ie_core = Core()
         model = ie_core.read_model(model=model_path)

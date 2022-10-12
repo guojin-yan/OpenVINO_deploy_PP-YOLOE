@@ -1,6 +1,4 @@
 import cv2 as cv
-import numpy as np
-
 from openvino_predictor import Predictor
 from process import process_image,process_result,draw_box,read_lable
 
