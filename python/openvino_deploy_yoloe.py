@@ -4,7 +4,8 @@ from process import process_image,process_result,draw_box,read_lable
 
 def yoloe_infer():
     '''-------------------1. 导入相关信息 ----------------------'''
-    yoloe_model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_s_80e_coco.onnx"
+    # yoloe_model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_s_80e_coco.onnx"
+    yoloe_model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_s_80e_coco.xml"
     image_path = "E:/Text_dataset/YOLOv5/0001.jpg"
     lable_path = "E:/Git_space/基于OpenVINO部署PP-YOLOE模型/model/lable.txt";
     '''-------------------2. 创建模型预测器 ----------------------'''
