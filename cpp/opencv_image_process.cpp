@@ -102,7 +102,7 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
             box.y = y;
             box.width = width;
             box.height = height;
-
+            std::cout << box << std::endl;
             position_boxes.push_back(box);
             classIds.push_back(max_point.x);
             confidences.push_back(score);

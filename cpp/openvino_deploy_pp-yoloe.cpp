@@ -31,7 +31,7 @@ void openvino_deploy_ppyoloe() {
     std::string output_conf_node_name = "concat_14.tmp_0";
 
     // 测试图片
-    std::string image_path = "../image/demo_1.jpg";
+    std::string image_path = "../image/demo_3.jpg";
     // 类别文件
     std::string lable_path = "../model/lable.txt";
 

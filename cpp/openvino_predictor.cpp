@@ -95,6 +95,7 @@ std::vector<float> Predictor::get_output_data(std::string output_node_name) {
         float data = *result_ptr;
         out_data[i] = data;
         result_ptr++;
+        std::cout << data << "  ";
     }
     return out_data;
 }
