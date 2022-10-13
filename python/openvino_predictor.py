@@ -1,10 +1,3 @@
-import os
-import sys
-from pathlib import Path
-from typing import Tuple
-
-import cv2
-import numpy as np
 from openvino.runtime import Core
 
 class Predictor:

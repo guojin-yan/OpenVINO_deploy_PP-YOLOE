@@ -1,23 +1,37 @@
-# OpenVINO<sup>TM</sup>部署PP-YOLOE模型
+# OpenVINO<sup>TM</sup>部署PaddlePadle-YOLOE模型
 
-# 1. PP-YOLOE模型
+# 1. 项目介绍
 
-&emsp;目标检测作为计算机视觉领域的顶梁柱，不仅可以独立完成车辆、商品、缺陷检测等任务，也是人脸识别、视频分析、以图搜图等复合技术的核心模块，在自动驾驶、工业视觉、安防交通等领域的商业价值有目共睹。
+&emsp;目标检测作为计算机视觉领域的顶梁柱，不仅可以独立完成车辆、商品、缺陷检测等任务，也是人脸识别、视频分析、以图搜图等复合技术的核心模块，在自动驾驶、工业视觉、安防交通等领域的商业价值有目共睹。PaddleDetection为基于飞桨PaddlePaddle的端到端目标检测套件， PP-YOLOE 是PaddleDetection推出的一种高精度SOTA目标检测模型，基于PP-YOLOv2的卓越的单阶段Anchor-free模型，超越了多种流行的YOLO模型。
 
-&emsp;PaddleDetection为基于飞桨PaddlePaddle的端到端目标检测套件，内置30+模型算法及250+预训练模型，覆盖目标检测、实例分割、跟踪、关键点检测等方向，其中包括服务器端和移动端高精度、轻量级产业级SOTA模型、冠军方案和学术前沿算法，并提供配置化的网络模块组件、十余种数据增强策略和损失函数等高阶优化支持和多种部署方案，在打通数据处理、模型开发、训练、压缩、部署全流程的基础上，提供丰富的案例及教程，加速算法产业落地应用。
+&emsp;OpenVINO<sup>TM</sup>是英特尔基于自身现有的硬件平台开发的一种可以加快高性能计算机视觉和深度学习视觉应用开发速度工具套件，用于快速开发应用程序和解决方案，以解决各种任务（包括人类视觉模拟、自动语音识别、自然语言处理和推荐系统等）。OpenVINO<sup>TM</sup>工具套件2022.1版于2022年3月22日正式发布，与以往版本相比发生了重大革新，提供预处理API函数、ONNX前端API、AUTO 设备插件，并且支持直接读入飞桨模型，在推理中中支持动态改变模型的形状，这极大地推动了不同网络的应用落地。2022年9月23日，OpenVINO<sup>TM</sup> 工具套件2022.2版推出，对2022.1进行了微调，以包括对英特尔最新 CPU 和离散 GPU 的支持，以实现更多的人工智能创新和机会。
 
-&emsp; PP-YOLOE 是PaddleDetection推出的一种高精度SOTA目标检测模型，基于PP-YOLOv2的卓越的单阶段Anchor-free模型，超越了多种流行的YOLO模型。
+&emsp;目前对于OpenVINO<sup>TM</sup>直接部署PP-YOLOE还存在一些问题，该项目针对部署中存在的问题，对PP-YOLOE模型进行裁剪，在不顺时模型精度基础上，打通了OpenVINO<sup>TM</sup>直接部署PP-YOLOE之路。
 
-- 尺寸多样：PP-YOLOE根据不同应用场景设计了s/m/l/x，4个尺寸的模型来支持不同算力水平的硬件，无论是哪个尺寸，精度-速度的平衡都超越当前所有同等计算量下的YOLO模型！可以通过width multiplier和depth multiplier配置。
-- 性能卓越：具体来说，PP-YOLOE-l在COCO test-dev上以精度51.4%，TRT FP16推理速度149 FPS的优异数据，相较YOLOX，精度提升1.3%，加速25%；相较YOLOv5，精度提升0.7%，加速26.8%。训练速度较PP-YOLOv2提高33%，降低模型训练成本。
-- 部署友好：与此同时，PP-YOLOE在结构设计上避免使用如deformable convolution或者matrix NMS之类的特殊算子，使其能轻松适配更多硬件。当前已经完备支持NVIDIA V100、T4这样的云端GPU架构以及如Jetson系列等边缘端GPU和FPGA开发板。
+# 2. 项目环境
 
-# 2. OpenVINO<sup>TM</sup>
+-  操作系统：Windows11
+- OpenVINO：2022.2
+- OpenCV：4.5.5
+- Visual Studio：2022
+- Python：3.9.13
 
-&emsp;OpenVINO<sup>TM</sup>是英特尔基于自身现有的硬件平台开发的一种可以加快高性能计算机视觉和深度学习视觉应用开发速度工具套件，用于快速开发应用程序和解决方案，以解决各种任务（包括人类视觉模拟、自动语音识别、自然语言处理和推荐系统等）。                               
+# 3. 项目下载安装
 
-![image-20221012150224745](./doc/image/image-20221012150224745.png)
+&emsp;项目所使用的源码均已经在Github和Gitee上开源，
 
-&emsp;该工具套件基于最新一代的人工神经网络，包括卷积神经网络 (CNN)、递归网络和基于注意力的网络，可扩展跨英特尔® 硬件的计算机视觉和非视觉工作负载，从而最大限度地提高性能。它通过从边缘到云部署的高性能、人工智能和深度学习推理来为应用程序加速，并且允许直接异构执行。极大的提高计算机视觉、自动语音识别、自然语言处理和其他常见任务中的深度学习性能；使用使用流行的框架（如TensorFlow，PyTorch等）训练的模型；减少资源需求，并在从边缘到云的一系列英特尔®平台上高效部署；支持在Windows与Linux系统，且官方支持编程语言为Python与C++语言。
+```
+Github:
+git clone https://github.com/guojin-yan/OpenVINO_deploy_PP-YOLOE.git
 
-&emsp;OpenVINO<sup>TM</sup>工具套件2022.1版于2022年3月22日正式发布，与以往版本相比发生了重大革新，提供预处理API函数、ONNX前端API、AUTO 设备插件，并且支持直接读入飞桨模型，在推理中中支持动态改变模型的形状，这极大地推动了不同网络的应用落地。2022年9月23日，OpenVINO<sup>TM</sup> 工具套件2022.2版推出，对2022.1进行了微调，以包括对英特尔最新 CPU 和离散 GPU 的支持，以实现更多的人工智能创新和机会。
+Gitee:
+https://gitee.com/guojin-yan/OpenVINO_deploy_PP-YOLOE.git
+```
+
+# 4. OpenVINO<sup>TM</sup>部署PP-YOLOE模型实现
+
+- [PP-YOLOE模型下载与转换](./doc/model_download_transformation.md)
+
+- [PP-YOLOE模型OpenVINO部署—C++](./doc/cpp_infer.md)
+
+- [PP-YOLOE模型OpenVINO部署—Python](./doc/python_infer.md)
