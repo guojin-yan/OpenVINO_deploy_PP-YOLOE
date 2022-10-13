@@ -1,0 +1,1319 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="image" output_port_id="image" />
+		<IR name="image" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_0" output_port_id="batch_norm_0.tmp_2" />
+		<IR name="BatchNormalization_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_0" output_port_id="swish_0.tmp_0" />
+		<IR name="Mul_0" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_1" output_port_id="batch_norm_1.tmp_2" />
+		<IR name="BatchNormalization_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_1" output_port_id="swish_1.tmp_0" />
+		<IR name="Mul_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_2" output_port_id="batch_norm_2.tmp_2" />
+		<IR name="BatchNormalization_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_2" output_port_id="swish_2.tmp_0" />
+		<IR name="Mul_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_3" output_port_id="batch_norm_3.tmp_2" />
+		<IR name="BatchNormalization_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_3" output_port_id="swish_3.tmp_0" />
+		<IR name="Mul_3" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_4" output_port_id="batch_norm_4.tmp_2" />
+		<IR name="BatchNormalization_4" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_4" output_port_id="swish_4.tmp_0" />
+		<IR name="Mul_4" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_5" output_port_id="batch_norm_5.tmp_2" />
+		<IR name="BatchNormalization_5" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_5" output_port_id="swish_5.tmp_0" />
+		<IR name="Mul_5" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_6" output_port_id="batch_norm_6.tmp_2" />
+		<IR name="BatchNormalization_6" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_6" output_port_id="swish_6.tmp_0" />
+		<IR name="Mul_6" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_95.w_0" output_port_id="conv2d_95.w_0" />
+		<IR name="conv2d_95.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_7" output_port_id="conv2d_113.tmp_0" />
+		<IR name="Conv_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_0" output_port_id="Reshape_0" />
+		<IR name="Reshape_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_0" output_port_id="conv2d_113.tmp_1" />
+		<IR name="Add_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_7" output_port_id="swish_7.tmp_0" />
+		<IR name="Mul_7" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_1" output_port_id="elementwise_add_0" />
+		<IR name="Add_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_0" output_port_id="concat_0.tmp_0" />
+		<IR name="Concat_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMean_0" output_port_id="mean_0.tmp_0" />
+		<IR name="ReduceMean_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_9.w_0" output_port_id="conv2d_9.w_0" />
+		<IR name="conv2d_9.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_8" output_port_id="conv2d_114.tmp_0" />
+		<IR name="Conv_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_1" output_port_id="Reshape_1" />
+		<IR name="Reshape_1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_2" output_port_id="conv2d_114.tmp_1" />
+		<IR name="Add_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="HardSigmoid_0" output_port_id="hardsigmoid_0.tmp_0" />
+		<IR name="HardSigmoid_0" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mul_8" output_port_id="tmp_0" />
+		<IR name="Mul_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_7" output_port_id="batch_norm_7.tmp_2" />
+		<IR name="BatchNormalization_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_9" output_port_id="swish_8.tmp_0" />
+		<IR name="Mul_9" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_8" output_port_id="batch_norm_8.tmp_2" />
+		<IR name="BatchNormalization_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_10" output_port_id="swish_9.tmp_0" />
+		<IR name="Mul_10" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_9" output_port_id="batch_norm_9.tmp_2" />
+		<IR name="BatchNormalization_9" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_11" output_port_id="swish_10.tmp_0" />
+		<IR name="Mul_11" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_10" output_port_id="batch_norm_10.tmp_2" />
+		<IR name="BatchNormalization_10" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_12" output_port_id="swish_11.tmp_0" />
+		<IR name="Mul_12" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_11" output_port_id="batch_norm_11.tmp_2" />
+		<IR name="BatchNormalization_11" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_13" output_port_id="swish_12.tmp_0" />
+		<IR name="Mul_13" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_96.w_0" output_port_id="conv2d_96.w_0" />
+		<IR name="conv2d_96.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_14" output_port_id="conv2d_120.tmp_0" />
+		<IR name="Conv_14" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_2" output_port_id="Reshape_2" />
+		<IR name="Reshape_2" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_3" output_port_id="conv2d_120.tmp_1" />
+		<IR name="Add_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_14" output_port_id="swish_13.tmp_0" />
+		<IR name="Mul_14" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_4" output_port_id="elementwise_add_1" />
+		<IR name="Add_4" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_12" output_port_id="batch_norm_12.tmp_2" />
+		<IR name="BatchNormalization_12" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_15" output_port_id="swish_14.tmp_0" />
+		<IR name="Mul_15" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_97.w_0" output_port_id="conv2d_97.w_0" />
+		<IR name="conv2d_97.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_16" output_port_id="conv2d_122.tmp_0" />
+		<IR name="Conv_16" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_3" output_port_id="Reshape_3" />
+		<IR name="Reshape_3" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_5" output_port_id="conv2d_122.tmp_1" />
+		<IR name="Add_5" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_16" output_port_id="swish_15.tmp_0" />
+		<IR name="Mul_16" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_6" output_port_id="elementwise_add_2" />
+		<IR name="Add_6" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_1" output_port_id="concat_1.tmp_0" />
+		<IR name="Concat_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMean_1" output_port_id="mean_1.tmp_0" />
+		<IR name="ReduceMean_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_20.w_0" output_port_id="conv2d_20.w_0" />
+		<IR name="conv2d_20.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_17" output_port_id="conv2d_123.tmp_0" />
+		<IR name="Conv_17" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_4" output_port_id="Reshape_4" />
+		<IR name="Reshape_4" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_7" output_port_id="conv2d_123.tmp_1" />
+		<IR name="Add_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="HardSigmoid_1" output_port_id="hardsigmoid_1.tmp_0" />
+		<IR name="HardSigmoid_1" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mul_17" output_port_id="tmp_1" />
+		<IR name="Mul_17" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_13" output_port_id="batch_norm_13.tmp_2" />
+		<IR name="BatchNormalization_13" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_18" output_port_id="swish_16.tmp_0" />
+		<IR name="Mul_18" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_14" output_port_id="batch_norm_14.tmp_2" />
+		<IR name="BatchNormalization_14" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_19" output_port_id="swish_17.tmp_0" />
+		<IR name="Mul_19" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_15" output_port_id="batch_norm_15.tmp_2" />
+		<IR name="BatchNormalization_15" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_20" output_port_id="swish_18.tmp_0" />
+		<IR name="Mul_20" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_16" output_port_id="batch_norm_16.tmp_2" />
+		<IR name="BatchNormalization_16" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_21" output_port_id="swish_19.tmp_0" />
+		<IR name="Mul_21" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_17" output_port_id="batch_norm_17.tmp_2" />
+		<IR name="BatchNormalization_17" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_22" output_port_id="swish_20.tmp_0" />
+		<IR name="Mul_22" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_98.w_0" output_port_id="conv2d_98.w_0" />
+		<IR name="conv2d_98.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_23" output_port_id="conv2d_129.tmp_0" />
+		<IR name="Conv_23" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_5" output_port_id="Reshape_5" />
+		<IR name="Reshape_5" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_8" output_port_id="conv2d_129.tmp_1" />
+		<IR name="Add_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_23" output_port_id="swish_21.tmp_0" />
+		<IR name="Mul_23" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_9" output_port_id="elementwise_add_3" />
+		<IR name="Add_9" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_18" output_port_id="batch_norm_18.tmp_2" />
+		<IR name="BatchNormalization_18" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_24" output_port_id="swish_22.tmp_0" />
+		<IR name="Mul_24" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_99.w_0" output_port_id="conv2d_99.w_0" />
+		<IR name="conv2d_99.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_25" output_port_id="conv2d_131.tmp_0" />
+		<IR name="Conv_25" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_6" output_port_id="Reshape_6" />
+		<IR name="Reshape_6" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_10" output_port_id="conv2d_131.tmp_1" />
+		<IR name="Add_10" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_25" output_port_id="swish_23.tmp_0" />
+		<IR name="Mul_25" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_11" output_port_id="elementwise_add_4" />
+		<IR name="Add_11" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_2" output_port_id="concat_2.tmp_0" />
+		<IR name="Concat_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMean_2" output_port_id="mean_2.tmp_0" />
+		<IR name="ReduceMean_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_31.w_0" output_port_id="conv2d_31.w_0" />
+		<IR name="conv2d_31.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_26" output_port_id="conv2d_132.tmp_0" />
+		<IR name="Conv_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_7" output_port_id="Reshape_7" />
+		<IR name="Reshape_7" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_12" output_port_id="conv2d_132.tmp_1" />
+		<IR name="Add_12" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="HardSigmoid_2" output_port_id="hardsigmoid_2.tmp_0" />
+		<IR name="HardSigmoid_2" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mul_26" output_port_id="tmp_2" />
+		<IR name="Mul_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_19" output_port_id="batch_norm_19.tmp_2" />
+		<IR name="BatchNormalization_19" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_27" output_port_id="swish_24.tmp_0" />
+		<IR name="Mul_27" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_20" output_port_id="batch_norm_20.tmp_2" />
+		<IR name="BatchNormalization_20" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_28" output_port_id="swish_25.tmp_0" />
+		<IR name="Mul_28" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_21" output_port_id="batch_norm_21.tmp_2" />
+		<IR name="BatchNormalization_21" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_29" output_port_id="swish_26.tmp_0" />
+		<IR name="Mul_29" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_22" output_port_id="batch_norm_22.tmp_2" />
+		<IR name="BatchNormalization_22" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_30" output_port_id="swish_27.tmp_0" />
+		<IR name="Mul_30" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_23" output_port_id="batch_norm_23.tmp_2" />
+		<IR name="BatchNormalization_23" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_31" output_port_id="swish_28.tmp_0" />
+		<IR name="Mul_31" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_100.w_0" output_port_id="conv2d_100.w_0" />
+		<IR name="conv2d_100.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_32" output_port_id="conv2d_138.tmp_0" />
+		<IR name="Conv_32" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_8" output_port_id="Reshape_8" />
+		<IR name="Reshape_8" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_13" output_port_id="conv2d_138.tmp_1" />
+		<IR name="Add_13" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_32" output_port_id="swish_29.tmp_0" />
+		<IR name="Mul_32" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_14" output_port_id="elementwise_add_5" />
+		<IR name="Add_14" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_3" output_port_id="concat_3.tmp_0" />
+		<IR name="Concat_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMean_3" output_port_id="mean_3.tmp_0" />
+		<IR name="ReduceMean_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_39.w_0" output_port_id="conv2d_39.w_0" />
+		<IR name="conv2d_39.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_33" output_port_id="conv2d_139.tmp_0" />
+		<IR name="Conv_33" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_9" output_port_id="Reshape_9" />
+		<IR name="Reshape_9" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_15" output_port_id="conv2d_139.tmp_1" />
+		<IR name="Add_15" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="HardSigmoid_3" output_port_id="hardsigmoid_3.tmp_0" />
+		<IR name="HardSigmoid_3" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mul_33" output_port_id="tmp_3" />
+		<IR name="Mul_33" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_24" output_port_id="batch_norm_24.tmp_2" />
+		<IR name="BatchNormalization_24" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_34" output_port_id="swish_30.tmp_0" />
+		<IR name="Mul_34" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_25" output_port_id="batch_norm_25.tmp_2" />
+		<IR name="BatchNormalization_25" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_35" output_port_id="swish_31.tmp_0" />
+		<IR name="Mul_35" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_26" output_port_id="batch_norm_26.tmp_2" />
+		<IR name="BatchNormalization_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_36" output_port_id="swish_32.tmp_0" />
+		<IR name="Mul_36" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_27" output_port_id="batch_norm_27.tmp_2" />
+		<IR name="BatchNormalization_27" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_37" output_port_id="swish_33.tmp_0" />
+		<IR name="Mul_37" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_101.w_0" output_port_id="conv2d_101.w_0" />
+		<IR name="conv2d_101.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_38" output_port_id="conv2d_144.tmp_0" />
+		<IR name="Conv_38" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_10" output_port_id="Reshape_10" />
+		<IR name="Reshape_10" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_16" output_port_id="conv2d_144.tmp_1" />
+		<IR name="Add_16" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_38" output_port_id="swish_34.tmp_0" />
+		<IR name="Mul_38" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="MaxPool_0" output_port_id="pool2d_0.tmp_0" />
+		<IR name="MaxPool_0" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="MaxPool_1" output_port_id="pool2d_1.tmp_0" />
+		<IR name="MaxPool_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="MaxPool_2" output_port_id="pool2d_2.tmp_0" />
+		<IR name="MaxPool_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_4" output_port_id="concat_4.tmp_0" />
+		<IR name="Concat_4" output_port_id="4" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_28" output_port_id="batch_norm_28.tmp_2" />
+		<IR name="BatchNormalization_28" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_39" output_port_id="swish_35.tmp_0" />
+		<IR name="Mul_39" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_5" output_port_id="concat_5.tmp_0" />
+		<IR name="Concat_5" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_29" output_port_id="batch_norm_29.tmp_2" />
+		<IR name="BatchNormalization_29" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_40" output_port_id="swish_36.tmp_0" />
+		<IR name="Mul_40" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_30" output_port_id="batch_norm_30.tmp_2" />
+		<IR name="BatchNormalization_30" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_41" output_port_id="swish_37.tmp_0" />
+		<IR name="Mul_41" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Constant_12" output_port_id="Constant_12" />
+		<IR name="Constant_12" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Resize_0" output_port_id="nearest_interp_v2_0.tmp_0" />
+		<IR name="Resize_0" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Concat_6" output_port_id="concat_6.tmp_0" />
+		<IR name="Concat_6" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_31" output_port_id="batch_norm_31.tmp_2" />
+		<IR name="BatchNormalization_31" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_42" output_port_id="swish_38.tmp_0" />
+		<IR name="Mul_42" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_32" output_port_id="batch_norm_32.tmp_2" />
+		<IR name="BatchNormalization_32" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_43" output_port_id="swish_39.tmp_0" />
+		<IR name="Mul_43" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_33" output_port_id="batch_norm_33.tmp_2" />
+		<IR name="BatchNormalization_33" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_44" output_port_id="swish_40.tmp_0" />
+		<IR name="Mul_44" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_102.w_0" output_port_id="conv2d_102.w_0" />
+		<IR name="conv2d_102.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_45" output_port_id="conv2d_151.tmp_0" />
+		<IR name="Conv_45" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_11" output_port_id="Reshape_11" />
+		<IR name="Reshape_11" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_17" output_port_id="conv2d_151.tmp_1" />
+		<IR name="Add_17" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_45" output_port_id="swish_41.tmp_0" />
+		<IR name="Mul_45" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_7" output_port_id="concat_7.tmp_0" />
+		<IR name="Concat_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_34" output_port_id="batch_norm_34.tmp_2" />
+		<IR name="BatchNormalization_34" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_46" output_port_id="swish_42.tmp_0" />
+		<IR name="Mul_46" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_35" output_port_id="batch_norm_35.tmp_2" />
+		<IR name="BatchNormalization_35" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_47" output_port_id="swish_43.tmp_0" />
+		<IR name="Mul_47" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Constant_15" output_port_id="Constant_15" />
+		<IR name="Constant_15" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Resize_1" output_port_id="nearest_interp_v2_1.tmp_0" />
+		<IR name="Resize_1" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Concat_8" output_port_id="concat_8.tmp_0" />
+		<IR name="Concat_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_36" output_port_id="batch_norm_36.tmp_2" />
+		<IR name="BatchNormalization_36" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_48" output_port_id="swish_44.tmp_0" />
+		<IR name="Mul_48" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_37" output_port_id="batch_norm_37.tmp_2" />
+		<IR name="BatchNormalization_37" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_49" output_port_id="swish_45.tmp_0" />
+		<IR name="Mul_49" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_38" output_port_id="batch_norm_38.tmp_2" />
+		<IR name="BatchNormalization_38" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_50" output_port_id="swish_46.tmp_0" />
+		<IR name="Mul_50" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_103.w_0" output_port_id="conv2d_103.w_0" />
+		<IR name="conv2d_103.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_51" output_port_id="conv2d_157.tmp_0" />
+		<IR name="Conv_51" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_12" output_port_id="Reshape_12" />
+		<IR name="Reshape_12" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_18" output_port_id="conv2d_157.tmp_1" />
+		<IR name="Add_18" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_51" output_port_id="swish_47.tmp_0" />
+		<IR name="Mul_51" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_9" output_port_id="concat_9.tmp_0" />
+		<IR name="Concat_9" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_39" output_port_id="batch_norm_39.tmp_2" />
+		<IR name="BatchNormalization_39" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_52" output_port_id="swish_48.tmp_0" />
+		<IR name="Mul_52" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_40" output_port_id="batch_norm_40.tmp_2" />
+		<IR name="BatchNormalization_40" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_53" output_port_id="swish_49.tmp_0" />
+		<IR name="Mul_53" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_10" output_port_id="concat_10.tmp_0" />
+		<IR name="Concat_10" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_41" output_port_id="batch_norm_41.tmp_2" />
+		<IR name="BatchNormalization_41" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_54" output_port_id="swish_50.tmp_0" />
+		<IR name="Mul_54" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_42" output_port_id="batch_norm_42.tmp_2" />
+		<IR name="BatchNormalization_42" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_55" output_port_id="swish_51.tmp_0" />
+		<IR name="Mul_55" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_43" output_port_id="batch_norm_43.tmp_2" />
+		<IR name="BatchNormalization_43" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_56" output_port_id="swish_52.tmp_0" />
+		<IR name="Mul_56" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_105.w_0" output_port_id="conv2d_105.w_0" />
+		<IR name="conv2d_105.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_57" output_port_id="conv2d_163.tmp_0" />
+		<IR name="Conv_57" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_13" output_port_id="Reshape_13" />
+		<IR name="Reshape_13" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_19" output_port_id="conv2d_163.tmp_1" />
+		<IR name="Add_19" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_57" output_port_id="swish_53.tmp_0" />
+		<IR name="Mul_57" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_11" output_port_id="concat_11.tmp_0" />
+		<IR name="Concat_11" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_44" output_port_id="batch_norm_44.tmp_2" />
+		<IR name="BatchNormalization_44" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_58" output_port_id="swish_54.tmp_0" />
+		<IR name="Mul_58" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_45" output_port_id="batch_norm_45.tmp_2" />
+		<IR name="BatchNormalization_45" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_59" output_port_id="swish_55.tmp_0" />
+		<IR name="Mul_59" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_12" output_port_id="concat_12.tmp_0" />
+		<IR name="Concat_12" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_46" output_port_id="batch_norm_46.tmp_2" />
+		<IR name="BatchNormalization_46" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_60" output_port_id="swish_56.tmp_0" />
+		<IR name="Mul_60" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_47" output_port_id="batch_norm_47.tmp_2" />
+		<IR name="BatchNormalization_47" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_61" output_port_id="swish_57.tmp_0" />
+		<IR name="Mul_61" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_48" output_port_id="batch_norm_48.tmp_2" />
+		<IR name="BatchNormalization_48" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_62" output_port_id="swish_58.tmp_0" />
+		<IR name="Mul_62" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_104.w_0" output_port_id="conv2d_104.w_0" />
+		<IR name="conv2d_104.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_63" output_port_id="conv2d_169.tmp_0" />
+		<IR name="Conv_63" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_14" output_port_id="Reshape_14" />
+		<IR name="Reshape_14" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_20" output_port_id="conv2d_169.tmp_1" />
+		<IR name="Add_20" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_63" output_port_id="swish_59.tmp_0" />
+		<IR name="Mul_63" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Concat_13" output_port_id="concat_13.tmp_0" />
+		<IR name="Concat_13" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_49" output_port_id="batch_norm_49.tmp_2" />
+		<IR name="BatchNormalization_49" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_64" output_port_id="swish_60.tmp_0" />
+		<IR name="Mul_64" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="GlobalAveragePool_0" output_port_id="pool2d_3.tmp_0" />
+		<IR name="GlobalAveragePool_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_76.w_0" output_port_id="conv2d_76.w_0" />
+		<IR name="conv2d_76.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_65" output_port_id="conv2d_171.tmp_0" />
+		<IR name="Conv_65" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_15" output_port_id="Reshape_15" />
+		<IR name="Reshape_15" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_21" output_port_id="conv2d_171.tmp_1" />
+		<IR name="Add_21" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_61" output_port_id="sigmoid_0.tmp_0" />
+		<IR name="Sigmoid_61" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_65" output_port_id="tmp_4" />
+		<IR name="Mul_65" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_50" output_port_id="batch_norm_50.tmp_2" />
+		<IR name="BatchNormalization_50" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_66" output_port_id="swish_61.tmp_0" />
+		<IR name="Mul_66" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_22" output_port_id="tmp_5" />
+		<IR name="Add_22" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_88.w_0" output_port_id="conv2d_88.w_0" />
+		<IR name="conv2d_88.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_67" output_port_id="conv2d_173.tmp_0" />
+		<IR name="Conv_67" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_16" output_port_id="Reshape_16" />
+		<IR name="Reshape_16" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_23" output_port_id="conv2d_173.tmp_1" />
+		<IR name="Add_23" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_65" output_port_id="sigmoid_2.tmp_0" />
+		<IR name="Sigmoid_65" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Constant_24" output_port_id="Constant_24" />
+		<IR name="Constant_24" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_20" output_port_id="reshape2_1.tmp_0" />
+		<IR name="Reshape_20" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="GlobalAveragePool_1" output_port_id="pool2d_4.tmp_0" />
+		<IR name="GlobalAveragePool_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_80.w_0" output_port_id="conv2d_80.w_0" />
+		<IR name="conv2d_80.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_72" output_port_id="conv2d_178.tmp_0" />
+		<IR name="Conv_72" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_21" output_port_id="Reshape_21" />
+		<IR name="Reshape_21" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_26" output_port_id="conv2d_178.tmp_1" />
+		<IR name="Add_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_66" output_port_id="sigmoid_3.tmp_0" />
+		<IR name="Sigmoid_66" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_69" output_port_id="tmp_7" />
+		<IR name="Mul_69" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_52" output_port_id="batch_norm_52.tmp_2" />
+		<IR name="BatchNormalization_52" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_70" output_port_id="swish_63.tmp_0" />
+		<IR name="Mul_70" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_27" output_port_id="tmp_8" />
+		<IR name="Add_27" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_90.w_0" output_port_id="conv2d_90.w_0" />
+		<IR name="conv2d_90.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_74" output_port_id="conv2d_180.tmp_0" />
+		<IR name="Conv_74" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_22" output_port_id="Reshape_22" />
+		<IR name="Reshape_22" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_28" output_port_id="conv2d_180.tmp_1" />
+		<IR name="Add_28" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_70" output_port_id="sigmoid_5.tmp_0" />
+		<IR name="Sigmoid_70" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Constant_30" output_port_id="Constant_30" />
+		<IR name="Constant_30" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_26" output_port_id="reshape2_3.tmp_0" />
+		<IR name="Reshape_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="GlobalAveragePool_2" output_port_id="pool2d_5.tmp_0" />
+		<IR name="GlobalAveragePool_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_84.w_0" output_port_id="conv2d_84.w_0" />
+		<IR name="conv2d_84.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_79" output_port_id="conv2d_185.tmp_0" />
+		<IR name="Conv_79" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_27" output_port_id="Reshape_27" />
+		<IR name="Reshape_27" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_31" output_port_id="conv2d_185.tmp_1" />
+		<IR name="Add_31" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_71" output_port_id="sigmoid_6.tmp_0" />
+		<IR name="Sigmoid_71" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_73" output_port_id="tmp_10" />
+		<IR name="Mul_73" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_54" output_port_id="batch_norm_54.tmp_2" />
+		<IR name="BatchNormalization_54" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_74" output_port_id="swish_65.tmp_0" />
+		<IR name="Mul_74" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Add_32" output_port_id="tmp_11" />
+		<IR name="Add_32" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_92.w_0" output_port_id="conv2d_92.w_0" />
+		<IR name="conv2d_92.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_81" output_port_id="conv2d_187.tmp_0" />
+		<IR name="Conv_81" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_28" output_port_id="Reshape_28" />
+		<IR name="Reshape_28" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_33" output_port_id="conv2d_187.tmp_1" />
+		<IR name="Add_33" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_75" output_port_id="sigmoid_8.tmp_0" />
+		<IR name="Sigmoid_75" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Constant_36" output_port_id="Constant_36" />
+		<IR name="Constant_36" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_32" output_port_id="reshape2_5.tmp_0" />
+		<IR name="Reshape_32" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_14.tmp_0" output_port_id="concat_14.tmp_0" />
+		<IR name="concat_14.tmp_0" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="conv2d_78.w_0" output_port_id="conv2d_78.w_0" />
+		<IR name="conv2d_78.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_68" output_port_id="conv2d_174.tmp_0" />
+		<IR name="Conv_68" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_17" output_port_id="Reshape_17" />
+		<IR name="Reshape_17" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_24" output_port_id="conv2d_174.tmp_1" />
+		<IR name="Add_24" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_63" output_port_id="sigmoid_1.tmp_0" />
+		<IR name="Sigmoid_63" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_67" output_port_id="tmp_6" />
+		<IR name="Mul_67" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_51" output_port_id="batch_norm_51.tmp_2" />
+		<IR name="BatchNormalization_51" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_68" output_port_id="swish_62.tmp_0" />
+		<IR name="Mul_68" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_89.w_0" output_port_id="conv2d_89.w_0" />
+		<IR name="conv2d_89.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_70" output_port_id="conv2d_176.tmp_0" />
+		<IR name="Conv_70" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_18" output_port_id="Reshape_18" />
+		<IR name="Reshape_18" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_25" output_port_id="conv2d_176.tmp_1" />
+		<IR name="Add_25" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_23" output_port_id="Constant_23" />
+		<IR name="Constant_23" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_19" output_port_id="reshape2_0.tmp_0" />
+		<IR name="Reshape_19" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose_1" output_port_id="Transpose_1" />
+		<IR name="Transpose_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Softmax_0" output_port_id="Softmax_0" />
+		<IR name="Softmax_0" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Transpose_2" output_port_id="softmax_0.tmp_0" />
+		<IR name="Transpose_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_94.w_0" output_port_id="conv2d_94.w_0" />
+		<IR name="conv2d_94.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_71" output_port_id="conv2d_177.tmp_0" />
+		<IR name="Conv_71" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Squeeze_0" output_port_id="squeeze_0.tmp_0" />
+		<IR name="Squeeze_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_82.w_0" output_port_id="conv2d_82.w_0" />
+		<IR name="conv2d_82.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_75" output_port_id="conv2d_181.tmp_0" />
+		<IR name="Conv_75" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_23" output_port_id="Reshape_23" />
+		<IR name="Reshape_23" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_29" output_port_id="conv2d_181.tmp_1" />
+		<IR name="Add_29" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_68" output_port_id="sigmoid_4.tmp_0" />
+		<IR name="Sigmoid_68" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_71" output_port_id="tmp_9" />
+		<IR name="Mul_71" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_53" output_port_id="batch_norm_53.tmp_2" />
+		<IR name="BatchNormalization_53" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_72" output_port_id="swish_64.tmp_0" />
+		<IR name="Mul_72" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_91.w_0" output_port_id="conv2d_91.w_0" />
+		<IR name="conv2d_91.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_77" output_port_id="conv2d_183.tmp_0" />
+		<IR name="Conv_77" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_24" output_port_id="Reshape_24" />
+		<IR name="Reshape_24" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_30" output_port_id="conv2d_183.tmp_1" />
+		<IR name="Add_30" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_29" output_port_id="Constant_29" />
+		<IR name="Constant_29" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_25" output_port_id="reshape2_2.tmp_0" />
+		<IR name="Reshape_25" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose_4" output_port_id="Transpose_4" />
+		<IR name="Transpose_4" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Softmax_1" output_port_id="Softmax_1" />
+		<IR name="Softmax_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Transpose_5" output_port_id="softmax_1.tmp_0" />
+		<IR name="Transpose_5" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_78" output_port_id="conv2d_184.tmp_0" />
+		<IR name="Conv_78" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Squeeze_1" output_port_id="squeeze_1.tmp_0" />
+		<IR name="Squeeze_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2d_86.w_0" output_port_id="conv2d_86.w_0" />
+		<IR name="conv2d_86.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_82" output_port_id="conv2d_188.tmp_0" />
+		<IR name="Conv_82" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_29" output_port_id="Reshape_29" />
+		<IR name="Reshape_29" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_34" output_port_id="conv2d_188.tmp_1" />
+		<IR name="Add_34" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_73" output_port_id="sigmoid_7.tmp_0" />
+		<IR name="Sigmoid_73" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_75" output_port_id="tmp_12" />
+		<IR name="Mul_75" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="BatchNormalization_55" output_port_id="batch_norm_55.tmp_2" />
+		<IR name="BatchNormalization_55" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mul_76" output_port_id="swish_66.tmp_0" />
+		<IR name="Mul_76" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2d_93.w_0" output_port_id="conv2d_93.w_0" />
+		<IR name="conv2d_93.w_0" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_84" output_port_id="conv2d_190.tmp_0" />
+		<IR name="Conv_84" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Reshape_30" output_port_id="Reshape_30" />
+		<IR name="Reshape_30" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Add_35" output_port_id="conv2d_190.tmp_1" />
+		<IR name="Add_35" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_35" output_port_id="Constant_35" />
+		<IR name="Constant_35" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_31" output_port_id="reshape2_4.tmp_0" />
+		<IR name="Reshape_31" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose_7" output_port_id="Transpose_7" />
+		<IR name="Transpose_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Softmax_2" output_port_id="Softmax_2" />
+		<IR name="Softmax_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Transpose_8" output_port_id="softmax_2.tmp_0" />
+		<IR name="Transpose_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Conv_85" output_port_id="conv2d_191.tmp_0" />
+		<IR name="Conv_85" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Squeeze_2" output_port_id="squeeze_2.tmp_0" />
+		<IR name="Squeeze_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_15" output_port_id="concat_15.tmp_0" />
+		<IR name="Concat_15" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Split_0" output_port_id="split_0.tmp_0" />
+		<IR name="Split_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Split_0" output_port_id="split_0.tmp_1" />
+		<IR name="Split_0" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Add_36" output_port_id="tmp_13" />
+		<IR name="Add_36" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Add_37" output_port_id="tmp_14" />
+		<IR name="Add_37" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Add_38" output_port_id="tmp_15" />
+		<IR name="Add_38" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_16" output_port_id="concat_16.tmp_0" />
+		<IR name="Concat_16" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="tmp_16" output_port_id="tmp_16" />
+		<IR name="tmp_16" output_port_id="2" />
+	</map>
+</mapping>
