@@ -22,6 +22,7 @@ void openvino_deploy_ppyoloe() {
     // 模型路径
     std::string model_path = "../model/ppyoloe_plus_crn_s_80e_coco.onnx";
     // std::string model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_l_80e_coco.onnx";
+    // std::string model_path = "../model/ir/ppyoloe_plus_crn_s_80e_coco.xml";
     // 设备名称
     std::string device_name = "CPU";
     // 输入节点
@@ -31,12 +32,11 @@ void openvino_deploy_ppyoloe() {
     std::string output_conf_node_name = "concat_14.tmp_0";
 
     // 测试图片
-    std::string image_path = "../image/demo_3.jpg";
+    std::string image_path = "../image/demo_1.jpg";
     // 类别文件
     std::string lable_path = "../model/lable.txt";
 
-    // 创建推理通道
-    Predictor predictor(model_path, device_name);
+  
     // 创建数据处理类
     ImageProcess image_pro;
     // 读取类别文件
@@ -51,11 +51,13 @@ void openvino_deploy_ppyoloe() {
     image.copyTo(input_mat(roi));
 
     // 设置缩放比例
-    image_pro.scale_factor = (double)length / 640.0 ;
+    image_pro.set_scale_factor((double)length / 640.0);
 
     // 归一化处理
-    cv::Mat input_data = image_pro.image_normalize(input_mat, input_size, 2);
+    cv::Mat input_data = image_pro.image_normalize(input_mat, input_size);
 
+    // 创建推理通道
+    Predictor predictor(model_path, device_name);
     // 加载模型推理数据
     ov::Tensor input_tensor = predictor.get_tensor(input__node_name);
     predictor.fill_tensor_data_image(input_tensor, input_data);
@@ -69,11 +71,6 @@ void openvino_deploy_ppyoloe() {
 
     cv::imshow("result", result_image);
     cv::waitKey(0);
-
-
-
-
-
 }
 
 

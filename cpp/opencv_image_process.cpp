@@ -1,14 +1,11 @@
 #include "opencv_image_process.h"
 
-/// <summary>
-/// 预处理图像数据
-/// 1.转换RGB 2.缩放图片  3.图片归一化
-/// </summary>
-/// <param name="sourse_mat">原图片</param>
-/// <param name="size">图片大小</param>
-/// <param name="type">归一化方式</param>
-/// <returns></returns>
-cv::Mat ImageProcess::image_normalize(cv::Mat& sourse_mat, cv::Size& size, int type) {
+
+// @brief 预处理图像数据，包括以下几个处理步骤：1.转换RGB 2.缩放图片  3.图片归一化
+// @param sourse_mat 原图片
+// @param size 模型输入大小
+// @return 返回处理后的图片数据
+cv::Mat ImageProcess::image_normalize(cv::Mat& sourse_mat, cv::Size& size) {
 
     cv::Mat image = sourse_mat.clone();
 
@@ -17,62 +14,29 @@ cv::Mat ImageProcess::image_normalize(cv::Mat& sourse_mat, cv::Size& size, int t
     cv::resize(image, image, size, 0, 0, cv::INTER_NEAREST);
     
 
-    if (type == 0) {
-        // 图像数据归一化，减均值mean，除以方差std
-        // PaddleDetection模型使用imagenet数据集的均值 Mean = [0.485, 0.456, 0.406]和方差 std = [0.229, 0.224, 0.225]
-        std::vector<float> mean_values{ 0.485 * 255, 0.456 * 255, 0.406 * 255 };
-        std::vector<float> std_values{ 0.229 * 255, 0.224 * 255, 0.225 * 255 };
+    std::vector<float> std_values{ 1.0 * 255, 1.0 * 255, 1.0 * 255 };
+    std::vector<cv::Mat> rgb_channels(3);
+    cv::split(image, rgb_channels); // 分离图片数据通道
 
-        std::vector<cv::Mat> rgb_channels(3);
-
-        cv::split(image, rgb_channels); // 分离图片数据通道
-
-        for (auto i = 0; i < rgb_channels.size(); i++) {
-            //分通道依此对每一个通道数据进行归一化处理
-            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i], (0.0 - mean_values[i]) / std_values[i]);
-        }
-
-        cv::merge(rgb_channels, image); // 合并图片数据通道
-        return image;
+    for (auto i = 0; i < rgb_channels.size(); i++) {
+        //分通道依此对每一个通道数据进行归一化处理
+        rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i]);
     }
-    else if (type == 1) {
-        std::vector<float> mean_values{ 0.5 * 255, 0.5 * 255, 0.5 * 255 };
-        std::vector<float> std_values{ 0.5 * 255, 0.5 * 255, 0.5 * 255 };
-        std::vector<cv::Mat> rgb_channels(3);
 
-        cv::split(image, rgb_channels); // 分离图片数据通道
+    cv::merge(rgb_channels, image); // 合并图片数据通道
+    return image;
 
-        for (auto i = 0; i < rgb_channels.size(); i++) {
-            //分通道依此对每一个通道数据进行归一化处理
-            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i], (0.0 - mean_values[i]) / std_values[i]);
-        }
-
-        cv::merge(rgb_channels, image); // 合并图片数据通道
-        return image;
-    }
-    else if (type == 2) {
-        std::vector<float> std_values{ 1.0 * 255, 1.0 * 255, 1.0 * 255 };
-        std::vector<cv::Mat> rgb_channels(3);
-
-        cv::split(image, rgb_channels); // 分离图片数据通道
-
-        for (auto i = 0; i < rgb_channels.size(); i++) {
-            //分通道依此对每一个通道数据进行归一化处理
-            rgb_channels[i].convertTo(rgb_channels[i], CV_32FC1, 1.0 / std_values[i]);
-        }
-
-        cv::merge(rgb_channels, image); // 合并图片数据通道
-        return image;
-    }
 }
 
-
+// @brief 实现将模型读取的数据按照指定要求进行处理，并绘制到结果图片上
+// @param sourse_mat 原图片
+// @param vector_box 预测框数据
+// @param vector_conf 置信值数据
+// @return 绘制识别结果的图片
 cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<float>& vector_box, std::vector<float>& vector_conf) {
     cv::Mat image = sourse_mat.clone();
     cv::Mat conf_mat = cv::Mat(80, 8400, CV_32F, vector_conf.data());
-    std::cout << conf_mat.cols << "   " << conf_mat.rows << std::endl;
-    conf_mat = conf_mat.t();
-    std::cout << conf_mat.cols << "   " << conf_mat.rows << std::endl;
+    conf_mat = conf_mat.t(); // 矩阵转置，将输出形状由80×8400转为8400×80
 
     std::vector<cv::Rect> position_boxes; // 矩形框容器
     std::vector<float> confidences; // 置信值容器
@@ -102,7 +66,6 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
             box.y = y;
             box.width = width;
             box.height = height;
-            std::cout << box << std::endl;
             position_boxes.push_back(box);
             classIds.push_back(max_point.x);
             confidences.push_back(score);
@@ -142,4 +105,8 @@ void ImageProcess::read_class_names(std::string path_name) {
 
     }
     infile.close();             //关闭文件输入流 
+}
+
+void ImageProcess::set_scale_factor(double scale) {
+    this->scale_factor = scale;
 }

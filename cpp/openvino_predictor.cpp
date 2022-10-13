@@ -70,11 +70,11 @@ void Predictor::infer() {
     p->infer_request.infer();
 }
 
-/// <summary>
-/// 读取模型输出
-/// </summary>
-/// <param name="output_node_name"></param>
-/// <returns></returns>
+
+
+// @brief 读取模型输出
+// @param output_node_name 输出节点名称
+// @return 模型输出结果容器
 std::vector<float> Predictor::get_output_data(std::string output_node_name) {
     // 读取指定节点的tensor
     const ov::Tensor& output_tensor = p->infer_request.get_tensor(output_node_name);
@@ -95,7 +95,6 @@ std::vector<float> Predictor::get_output_data(std::string output_node_name) {
         float data = *result_ptr;
         out_data[i] = data;
         result_ptr++;
-        std::cout << data << "  ";
     }
     return out_data;
 }
