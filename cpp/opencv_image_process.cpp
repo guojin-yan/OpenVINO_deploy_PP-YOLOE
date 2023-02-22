@@ -84,8 +84,8 @@ cv::Mat ImageProcess::yoloe_result_process(cv::Mat& sourse_mat, std::vector<floa
         cv::rectangle(image, cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 10),
             cv::Point(position_boxes[index].br().x, position_boxes[index].tl().y), cv::Scalar(0, 255, 255), -1);
         cv::putText(image, class_names[idx] + " " + std::to_string(confidences[idx]), 
-            cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y - 5),
-            cv::FONT_HERSHEY_SIMPLEX, 0.3, cv::Scalar(0, 0, 0));
+            cv::Point(position_boxes[index].tl().x, position_boxes[index].tl().y -5),
+            cv::FONT_HERSHEY_SIMPLEX, 0.4, cv::Scalar(0, 0, 255));
     }
 
 

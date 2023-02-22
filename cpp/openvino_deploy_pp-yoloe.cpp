@@ -20,8 +20,8 @@ int main()
 
 void openvino_deploy_ppyoloe() {
     // 模型路径
-    std::string model_path = "../model/ppyoloe_plus_crn_s_80e_coco.onnx";
-    // std::string model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_l_80e_coco.onnx";
+    //std::string model_path = "../model/ppyoloe_plus_crn_s_80e_coco.onnx";
+     std::string model_path = "E:/Text_Model/pp-yoloe/ppyoloe_plus_crn_l_80e_coco.onnx";
     // std::string model_path = "../model/ir/ppyoloe_plus_crn_s_80e_coco.xml";
     // 设备名称
     std::string device_name = "CPU";
